@@ -1,4 +1,3 @@
-![GitHub last commit](https://img.shields.io/github/last-commit/cironeto/crud-angular-pubfuture?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/cironeto/crud-angular-pubfuture?style=flat-square)
 
 ## Sobre
