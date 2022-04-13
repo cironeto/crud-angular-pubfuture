@@ -1,0 +1,81 @@
+<body>
+    <div id="header">
+        <h1>Cadastro de Pessoas</h1>
+    </div>
+    
+    <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        Nome*
+        <input type="text" class="form-control" formControlName="nome"  required>
+        <div class="alert alert-danger"  *ngIf="verificaSeValidETouched('nome')">
+            Nome é obrigatório (mínimo 3 caracteres)
+        </div>
+        
+        Email*
+        <input type="text" class="form-control"  formControlName="email" required>
+        <div class="alert alert-danger"  *ngIf="verificaSeValidETouched('email')">
+            Email é obrigatório ou está inválido
+        </div>
+    
+        Telefone*
+        <input type="number" class="form-control" formControlName="telefone" id="inputTelefone" required>
+        <div class="alert alert-danger"  *ngIf="verificaSeValidETouched('telefone')">
+            Telefone é obrigatório ou está inválido
+        </div>
+        
+        <div id="estadoCidade">
+            Estado*
+            <select class="form-control" formControlName="estado" (change)="listarCidadesCadastrar()" (click)="listarCidadesCadastrar()" required>
+                <option hidden></option>
+                <option *ngFor="let e of estados">{{e.sigla}}</option>
+            </select>            
+        
+            Cidade*
+            <select class="form-control" formControlName="cidade" required >
+                <option hidden>Selecione...</option>
+                <option *ngFor="let c of cidades" value="{{c.nome}}" >{{c.nome}}</option>
+            </select>            
+        </div>
+
+        <div class="alert alert-danger"  *ngIf="verificaSeValidETouched('estado')">
+            Estado é obrigatório
+        </div>
+        <div class="alert alert-danger"  *ngIf="verificaSeValidETouched('cidade')">
+            Cidade é obrigatório
+        </div>
+        
+    
+        <p>(*) Campos obrigatórios</p>
+    
+        <button type="submit" *ngIf="btnVisivel" value="Cadastrar" class="btn btn-outline-primary">Cadastrar</button>
+        <button type="button" *ngIf="!btnVisivel" value="Alterar" (click)="alterarPessoa()" class="btn btn-outline-danger">Alterar</button>
+        <button type="button" *ngIf="!btnVisivel" value="Remover" (click)="removerPessoa()" class="btn btn-outline-warning">Remover</button>
+        <button type="button" *ngIf="!btnVisivel" value="Cancelar" (click)="cancelar()" class="btn btn-outline-secondary">Cancelar</button>
+        
+    </form>
+    
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>EMAIL</th>
+                <th>TELEFONE</th>
+                <th>ESTADO</th>
+                <th>CIDADE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of pessoas let i = index">
+                <td>{{p.id}}</td>
+                <td>{{p.nome}}</td>
+                <td>{{p.email}}</td>
+                <td>{{p.telefone}}</td>
+                <td>{{p.estado}}</td>
+                <td>{{p.cidade}}</td>
+                <td><button class="btn btn-success" (click)="selecionarPessoa(p.id)">Selecionar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>

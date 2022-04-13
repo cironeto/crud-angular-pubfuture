@@ -1,0 +1,14 @@
+<body>
+    <div id="header">
+        <h1>Total de pessoas cadastradas por estado</h1>
+    </div>
+    <div id="container">
+        <div class="card border-secondary" class="cards" *ngFor="let e of estadosComCadastros">
+            <div class="card-header">ESTADO: {{e}}</div>
+            <div class="card-body text-secondary">
+                <h5 class="card-title">Pessoas cadastradas</h5>
+                <h2>{{calculaTotalPessoasPorEstado(e)}}</h2>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,27 @@
+.cards{
+    border-radius: 5px;
+    margin: 10px;
+    width: 300px;
+    display:inline;
+    border: 1px solid gray;
+
+}
+
+h1{
+    margin: 20px;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-header{
+    font-size: 20px;
+}
+
+#header{
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}

@@ -1,0 +1,20 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Ciro",
+      "email": "ciro.neto@gmail.com",
+      "telefone": 47992582741,
+      "estado": "SC",
+      "cidade": "Blumenau"
+    },
+    {
+      "id": 2,
+      "nome": "Neto",
+      "email": "neto.ciro@uol.com.br",
+      "telefone": 1936513425,
+      "estado": "SP",
+      "cidade": "Espírito Santo do Pinhal"
+    }
+  ]
+}

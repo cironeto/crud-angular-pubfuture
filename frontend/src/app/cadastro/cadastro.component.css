@@ -1,0 +1,55 @@
+form {
+    width: 50%;
+    margin: 20px auto;
+}
+
+#estadoCidade {
+    display: flex;
+    flex-direction: row;
+}
+
+input {
+    margin-bottom: 10px;
+    /* height: 30px; */
+}
+
+#inputTelefone{
+    margin-bottom: 30px;
+}
+
+select {
+    /* height: 35px; */
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+
+button {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+p {
+    color: gray;
+}
+
+.ng-invalid.ng-touched:not(form) {
+    border: 1px rgb(173, 0, 0) solid;
+}
+
+#header {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+/* 
+*{
+    border: 1px solid black;
+} */
