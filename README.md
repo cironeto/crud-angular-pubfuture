@@ -5,7 +5,7 @@ Aplicação front-end criada para atividade de avaliação do Programa de Forma�
 O projeto consiste em um CRUD de pessoas, consumindo a API do IBGE para listagem de estados e cidades do Brasil.
 Os dados são enviados para o back-end através de uma API em Node criada com o plugin JSON-server.
 Todos os campos do cadastro são obrigatório e validados de acordo com o dado esperado, além do nome não poder existir repetido na base de dados.
-Deve exisitir também um contador total de pessoas cadastradas para cada estado.
+Exisite também um contador total de pessoas cadastradas para cada estado.
 
 
 Funcionalidades:
