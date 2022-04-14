@@ -25,7 +25,11 @@ Para execução deste projeto é necessário ter instalado:
 - Node
 
 ## Execução
-Abra o terminal em '.../crud-angular-pubfuture/frontend' e execute o comando do Angular para iniciar o servidor da aplicação Frontend:
+Abra o terminal em '.../crud-angular-pubfuture/frontend' e execute o comando para instalar os pacotes do projeto:
+```sh
+npm install
+```
+Depois execute para iniciar o servidor do Angular:
 ```sh
 ng s
 ```
