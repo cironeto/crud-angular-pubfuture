@@ -25,12 +25,17 @@ Para execução deste projeto é necessário ter instalado:
 - Node
 
 ## Execução
-Abra o terminal em '.../23-crud-angular/frontend' 
-e execute o comando do Angular para iniciar o servidor da aplicação Frontend:
+Abra o terminal em '.../crud-angular-pubfuture/frontend' e execute o comando do Angular para iniciar o servidor da aplicação Frontend:
 ```sh
 ng s
 ```
-Em outra janela do terminal, abra em '.../23-crud-angular/backend' e inicie o servidor Backend com o banco de dados.
+
+Em outra janela do terminal, abra em '.../crud-angular-pubfuture/backend' e instale o JSON Server
+```sh
+npm i json-server
+```
+
+Em seguida, inicie o servidor Backend com o banco de dados.
 ```sh
 npx json-server pessoas.json
 ```
